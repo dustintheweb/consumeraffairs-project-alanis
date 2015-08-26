@@ -2,7 +2,7 @@
 
 ## Homepage Variation
 
-For the Fall 2015 hackathon, Team Alanis will contribute a homepage variant of the existing layout
+> For the Fall 2015 hackathon, Team Alanis will contribute a homepage variant of the existing layout
 
 ## Usage
 
