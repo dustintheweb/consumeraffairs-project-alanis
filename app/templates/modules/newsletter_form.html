@@ -1,26 +1,31 @@
-<form method="post" action="http://us1.list-manage.com/subscribe/post" class="form-horizontal">
-    <input type="hidden" value="48290de6249ef2cecba9fe5de" name="u">
-    <input type="hidden" value="d3e98d2605" name="id">
-    <div class="control-group">
-        <label class="control-label" for="mc-daily-email">Email Address</label>
-        <div class="controls">
-            <input id="mc-daily-email" type="text" value="" name="EMAIL">
+<div class="newsletter">
+    <div class="newsletter-handle">
+        <i></i>
+        <span>Subscribe</span>
+    </div>
+    <div class="newsletter-wrapper">
+        <div class="newsletter-header">
+            <span class="newsletter-header-title">Stay up to date with Consumer News</span>
+        </div>
+        <div class="newsletter-form">
+            <form method="post" action="http://us1.list-manage.com/subscribe/post">
+                <input type="hidden" value="48290de6249ef2cecba9fe5de" name="u">
+                <input type="hidden" value="d3e98d2605" name="id">
+                <input type="hidden" name="EMAILTYPE" value="html">
+                <div class="newsletter-form-content">
+                    <div class="newsletter-form-item">
+                        <label for="mc_fname">First Name</label>
+                        <input placeholder="First name" id="mc_fname" type="text" value="" name="FNAME">
+                    </div>
+                    <div class="newsletter-form-item">
+                        <label class="" for="mc_email">Email Address</label>
+                        <input placeholder="E-mail" id="mc_email" type="text" value="" name="EMAIL">
+                    </div>
+                </div>
+                <div class="newsletter-form-button">
+                    <button type="submit">Sign up</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="control-group">
-        <label class="control-label" for="mc-daily-fname">First Name</label>
-        <div class="controls">
-            <input id="mc-daily-fname" type="text" value="" name="FNAME">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label">Format</label>
-        <div class="controls">
-            <label class="radio inline" for="mc-daily-prefered-html"><input type="radio" checked="checked" value="html" name="EMAILTYPE" id="mc-daily-prefered-html">HTML</label>
-            <label class="radio inline" for="mc-daily-prefered-text"><input type="radio" value="text" name="EMAILTYPE" id="mc-daily-prefered-text">Text</label>
-        </div>
-    </div>
-    <footer class="submit">
-        <button type="submit" class="btn blue small chevron">Subscribe</button>
-    </footer>
-</form>
+</div>

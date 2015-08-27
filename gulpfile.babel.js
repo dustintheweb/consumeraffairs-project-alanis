@@ -39,7 +39,7 @@ const testLintOptions = {
   }
 };
 
-gulp.task('lint', lint('app/scripts/**/*.js'));
+gulp.task('lint', lint(['app/scripts/**/*.js','!app/scripts/libs/*']));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {
@@ -110,10 +110,10 @@ gulp.task('serve', ['styles', 'fonts'], () => {
     '.tmp/styles/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/templates/**/*.html', ['preprocess-html']);
   gulp.watch('app/styles/_scss/**/*.scss', ['styles']);
   gulp.watch('app/styles/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
-  gulp.watch('app/templates/**/*.html', ['preprocess-html'])
 });
 
 gulp.task('serve:dist', () => {
