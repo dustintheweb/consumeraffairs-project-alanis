@@ -25,12 +25,39 @@ var app = {
 		$footer: $('body > .core > footer')
 	},
 	ev: {
-		click: Modernizr.touch ? 'touchstart' : 'click'
+		//click: Modernizr.touch ? 'touchstart' : 'click'
 	},
 	gbl: {
 		scrollY: 0
 	}
 };
+
+// ACCORDION
+(function ($) {
+	$.fn.accordion = function (options) {
+		var options = $.extend(true, {}, $.fn.accordion.defaults, options);
+		return this.each(function (i) {
+			var obj = $(this);
+			obj.data('options', options);
+			var handle = $(options.handle, obj);
+			var content = $(options.content, obj);
+			handle.click(function () {
+				content.toggleClass(options.activestate);
+			});
+			if(options.initopen >= 0 && options.initopen == i){
+				content.addClass(options.activestate);
+			}
+		});
+	};
+	$.fn.accordion.defaults = {
+		activestate: 'active',
+		handle: '> [class$="handle"]',
+		content: '> [class$="content"]',
+		initopen: -1
+	};
+})(jQuery);
+
+
 
 (function($) {
 
@@ -38,6 +65,7 @@ var app = {
 //
 
 // -- fastclick ---------------
-	FastClick.attach(document.body);
+	//FastClick.attach(document.body);
 
+	$('.newsletter').accordion({content: '> [class$="wrapper"]'});
 })(jQuery);

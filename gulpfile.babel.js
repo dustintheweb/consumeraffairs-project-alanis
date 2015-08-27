@@ -4,6 +4,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import preprocess from 'gulp-preprocess';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -38,7 +39,7 @@ const testLintOptions = {
   }
 };
 
-gulp.task('lint', lint('app/scripts/**/*.js'));
+gulp.task('lint', lint(['app/scripts/**/*.js','!app/scripts/libs/*']));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {
@@ -89,7 +90,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], () => {
+gulp.task('serve', ['preprocess-html', 'styles', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -102,12 +103,13 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/*.html',
+    'app/**/*.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/templates/**/*.html', ['preprocess-html']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -155,10 +157,16 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => { // 'lint', #### enable later -- bottleneck research eslint error flagging syntax
+gulp.task('build', ['preprocess-html', 'html', 'images', 'fonts', 'extras'], () => { // 'lint', #### enable later -- bottleneck research eslint error flagging syntax
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
+});
+
+gulp.task('preprocess-html', () => {
+  return gulp.src('app/templates/index.html')
+  .pipe(preprocess())
+  .pipe(gulp.dest('app'))
 });
