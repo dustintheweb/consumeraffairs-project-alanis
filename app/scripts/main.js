@@ -39,13 +39,14 @@ var app = {
 		return this.each(function (i) {
 			var obj = $(this);
 			obj.data('options', options);
+			obj.data('accordion', true);
 			var handle = $(options.handle, obj);
 			var content = $(options.content, obj);
-			content.css('max-height',content.outerHeight());
-			obj.addClass(options.closedstate)
 			handle.click(function () {
 				obj.toggleClass(options.closedstate);
 			});
+			content.css('max-height', content.outerHeight());
+			obj.addClass(options.closedstate)
 			if(options.initopen >= 0 && options.initopen == i){
 				obj.addClass(options.closedstate);
 			}
@@ -63,19 +64,17 @@ var app = {
 	$.fn.showmore = function (options) {
 		var options = $.extend(true, {}, $.fn.showmore.defaults, options);
 		var objs = this;
-		if($( window ).width() > options.maxWidth){
-			return objs;
-		}else{
-			$( window ).resize(function() {
-				var windowWidth = $(window).width();
-				if(windowWidth > options.maxWidth){
-					$.fn.showmore.destroy(objs, options);
-				}else{
-					$.fn.showmore.init(objs, options);
-				}
-			});
-			return $.fn.showmore.init(objs, options);
+		if($( window ).width() <= options.maxWidth){
+			$.fn.showmore.init(objs, options);
 		}
+		$( window ).resize(function() {
+			var windowWidth = $(window).width();
+			if(windowWidth > options.maxWidth){
+				$.fn.showmore.destroy(objs, options);
+			}else{
+				$.fn.showmore.init(objs, options);
+			}
+		});
 	};
 	$.fn.showmore.init = function(objs, options){
 		return objs.each(function (i) {
@@ -91,13 +90,16 @@ var app = {
 					var handle = $('<div class="' + options.styleClass + '_handle"><span>' + options.handleText + '</span></div>')
 						.appendTo(wrapper);
 					var items = header.nextUntil(options.header);
+					if(items.length <= 0){
+						items = header.children(options.items);
+					}
 					if(options.numShown > 0){
 						items = items.slice(options.numShown);
 					}
 					wrapper.insertBefore(items.eq(0));
 					content.append(items);
-
 					wrapper.accordion();
+
 				});
 			}
 		});
@@ -118,8 +120,8 @@ var app = {
 		});
 	};
 	$.fn.showmore.defaults = {
-		items: 'dd',
-		header: 'dt',
+		items: 'li',
+		header: 'ul',
 		maxWidth: '600',
 		numShown: 3,
 		styleClass: 'showmore',
@@ -137,5 +139,10 @@ var app = {
 	//FastClick.attach(document.body);
 
 	$('.newsletter').accordion({content: '> [class$="wrapper"]'});
-	$('.list-grid > dl').showmore();
+	$('.list-grid > dl').showmore({items: 'dd', header: 'dt'});
+
+	// Waiting on images to load.
+	$(window).load(function() {
+	    $('.home-metro-grid .inner').showmore({handleText: 'More categories'});
+	});
 })(jQuery);
