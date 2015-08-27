@@ -1,14 +1,6 @@
-/*>> App Font Vars >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@import "font-face"; // app font stack (for self hosted fonts)
 
-@import "font-local"; // app font stack (for self hosted fonts)
-
-// -- Font variables ---------------------------------
-$fira-sans:"Fira Sans", $trebuchet;
-$fira-sans-medium:"Fira Sans Medium", $trebuchet;
-$fira-sans-semi:"Fira Sans SemiBold", $trebuchet;
-$merriweather:"Merriweather", $georgia;
-
-// Helper Stacks
+// System Font Helper Stacks
 
 // -- Serif font-stacks -------------------------
 $georgia : Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif !default;
@@ -52,3 +44,10 @@ $consolas : Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida
 $cursive :"Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !default;
 
 // --------------------------------------------------------------------------------------------------------
+
+// App Fonts
+
+$fira-sans:"Fira Sans", $trebuchet;
+$fira-sans-medium:"Fira Sans Medium", $trebuchet;
+$fira-sans-semi:"Fira Sans SemiBold", $trebuchet;
+$merriweather:"Merriweather", $georgia;

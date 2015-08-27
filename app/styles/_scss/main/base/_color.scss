@@ -2,19 +2,19 @@
 ================================================*/
 
 // -- Generic Swatch -------------------------
-$black : #000;
-$blackLight : #333;
-$blackLighter : #555;
-$greyDarker : #999;
-$greyDark : #aaa;
-$grey : #ccc;
-$greyLight : #ddd;
-$greyLighter : #eee;
-$white : #fff;
-$whiteDark : #f5f5f5;
-$whiteDarker : #f0f0f0;
-$red : #f00;
-$blue : #0033ff;
+$black: #000;
+$blackLight: #333;
+$blackLighter: #555;
+$greyDarker: #999;
+$greyDark: #aaa;
+$grey: #ccc;
+$greyLight: #ddd;
+$greyLighter: #eee;
+$white: #fff;
+$whiteDark: #f5f5f5;
+$whiteDarker: #f0f0f0;
+$red: #f00;
+$blue: #0033ff;
 
 // -- Styleguide Swatch -------------------------
 // shades
@@ -43,10 +43,10 @@ $orange: #e67e25;
 // any theme specific colors
 
 // -- Application -------------------------
-$fontColor: $themeGrey;
+$fontColor: $pitch;
 //
-$linkColor : $themeRed;
-$linkHover : darken($linkColor, 10%);
-$linkVisited : darken($linkHover, 5%);
-$linkFocus : $linkHover;
-$linkActive : lighten(adjust-hue($linkColor, 75deg), 10%);
+$linkColor: $cerulean;
+$linkHover: darken($linkColor, 10%);
+$linkVisited: darken($linkHover, 5%);
+$linkFocus: $linkHover;
+$linkActive: lighten(adjust-hue($linkColor, 75deg), 10%);
