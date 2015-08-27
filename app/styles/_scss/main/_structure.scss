@@ -1,0 +1,34 @@
+/* ░░ Structure ░░░░░░░░░
+============================================*/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body, .base {
+	min-width: 320px;
+}
+
+body {
+	overflow-x: hidden;
+  font: normal 1em/1.6875 $helvetica;
+	font-weight: 400;
+  color: $fontColor;
+	background: $grey;
+  text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-kerning: normal;
+	-webkit-font-feature-settings:"calt", "liga", "clig", "kern";
+	font-feature-settings:"calt", "liga", "clig", "kern";
+  //
+  -ms-text-size-adjust: 100%; // www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+  -webkit-text-size-adjust: 100%; // Prevents iOS text size adjust after orientation change, without disabling user zoom
+}

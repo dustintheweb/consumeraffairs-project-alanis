@@ -72,13 +72,11 @@
   <!-- add critical css here -->
 
 </head>
-
 <body>
-  <!--[if lt IE 10]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
   <div class="base">
-
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
     <header role="banner">
       <div class="primary">
         <div class="logo">
@@ -153,7 +151,36 @@
                 <li data-ng-class="{active:page('/newsletter')}"> <a href="/newsletter">Newsletter</a> </li>
               </ul>
             </nav>
-          </div> -->
+          </div>
+
+      +    <form method="post" action="http://us1.list-manage.com/subscribe/post" class="form-horizontal">
+      +        <input type="hidden" value="48290de6249ef2cecba9fe5de" name="u">
+      +        <input type="hidden" value="d3e98d2605" name="id">
+      +        <div class="control-group">
+      +            <label class="control-label" for="mc-daily-email">Email Address</label>
+      +            <div class="controls">
+      +                <input id="mc-daily-email" type="text" value="" name="EMAIL">
+      +            </div>
+      +        </div>
+      +        <div class="control-group">
+      +            <label class="control-label" for="mc-daily-fname">First Name</label>
+      +            <div class="controls">
+      +                <input id="mc-daily-fname" type="text" value="" name="FNAME">
+      +            </div>
+      +        </div>
+      +        <div class="control-group">
+      +            <label class="control-label">Format</label>
+      +            <div class="controls">
+      +                <label class="radio inline" for="mc-daily-prefered-html"><input type="radio" checked="checked" value="html" name="EMAILTYPE" id="mc-daily-prefered-html">HTML</label>
+      +                <label class="radio inline" for="mc-daily-prefered-text"><input type="radio" value="text" name="EMAILTYPE" id="mc-daily-prefered-text">Text</label>
+      +            </div>
+      +        </div>
+      +        <footer class="submit">
+      +            <button type="submit" class="btn blue small chevron">Subscribe</button>
+      +        </footer>
+      +    </form>
+
+        -->
         </div>
       </div>
     </header>
@@ -208,7 +235,7 @@
           </ul>
         </section>
         <!--  -->
-        <section class="insert home-brand-insert">
+        <section class="hero home-brand-hero">
           <figure class="row">
             <figcaption class="inner">
               <div class="primary">
@@ -223,201 +250,201 @@
           </figure>
         </section>
         <!--  -->
-        <section class="list-grid">
+        <section class="list-grid home-list-grid">
           <dl>
             <dt>#</dt>
-            <dd><a class="homepage-link" href="/computers/3d-printer/">3D Printers</a></dd>
+            <dd><a href="/computers/3d-printer/">3D Printers</a></dd>
             <dt>A</dt>
-            <dd><a class="homepage-link" href="/homeowners/ac-repair-miami/">AC Repair Miami</a></dd>
-            <dd><a class="homepage-link" href="/furniture/adjustable-beds/">Adjustable Beds</a></dd>
-            <dd><a class="homepage-link" href="/health/air-ambulance/">Air Ambulance</a></dd>
-            <dd><a class="homepage-link" href="/travel/airlines.html">Airlines</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_alarm_systems.html">Alarm &amp; Security Systems</a></dd>
-            <dd><a class="homepage-link" href="/finance/annuities.html">Annuities</a></dd>
-            <dd><a class="homepage-link" href="/computers/antivirus-software/">Antivirus Software</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/appliance-retailers/">Appliance Retailers</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/appliances.htm">Appliances</a></dd>
-            <dd><a class="homepage-link" href="/automotive/access.html">Auto Accessories</a></dd>
-            <dd><a class="homepage-link" href="/automotive/dealers.htm">Auto Dealers</a></dd>
-            <dd><a class="homepage-link" href="/insurance/car.html">Auto Insurance</a></dd>
-            <dd><a class="homepage-link" href="/finance/auto-loans/">Auto Loans</a></dd>
-            <dd><a class="homepage-link" href="/automotive/manufacturers.htm">Auto Manufacturers</a></dd>
-            <dd><a class="homepage-link" href="/automotive/service_centers.htm">Auto Service &amp; Towing</a></dd>
-            <dd><a class="homepage-link" href="/auto_trans/index.html">Auto Transporters</a></dd>
-            <dd><a class="homepage-link" href="/auto_warranty/index.html">Auto Warranties</a></dd>
-            <dd><a class="homepage-link" href="/automated-investment-services/">Automated Investment Services</a></dd>
-            <dd><a class="homepage-link" href="/awnings/">Awnings</a></dd>
+            <dd><a href="/homeowners/ac-repair-miami/">AC Repair Miami</a></dd>
+            <dd><a href="/furniture/adjustable-beds/">Adjustable Beds</a></dd>
+            <dd><a href="/health/air-ambulance/">Air Ambulance</a></dd>
+            <dd><a href="/travel/airlines.html">Airlines</a></dd>
+            <dd><a href="/homeowners/aaa_alarm_systems.html">Alarm &amp; Security Systems</a></dd>
+            <dd><a href="/finance/annuities.html">Annuities</a></dd>
+            <dd><a href="/computers/antivirus-software/">Antivirus Software</a></dd>
+            <dd><a href="/homeowners/appliance-retailers/">Appliance Retailers</a></dd>
+            <dd><a href="/homeowners/appliances.htm">Appliances</a></dd>
+            <dd><a href="/automotive/access.html">Auto Accessories</a></dd>
+            <dd><a href="/automotive/dealers.htm">Auto Dealers</a></dd>
+            <dd><a href="/insurance/car.html">Auto Insurance</a></dd>
+            <dd><a href="/finance/auto-loans/">Auto Loans</a></dd>
+            <dd><a href="/automotive/manufacturers.htm">Auto Manufacturers</a></dd>
+            <dd><a href="/automotive/service_centers.htm">Auto Service &amp; Towing</a></dd>
+            <dd><a href="/auto_trans/index.html">Auto Transporters</a></dd>
+            <dd><a href="/auto_warranty/index.html">Auto Warranties</a></dd>
+            <dd><a href="/automated-investment-services/">Automated Investment Services</a></dd>
+            <dd><a href="/awnings/">Awnings</a></dd>
             <dt>B</dt>
-            <dd><a class="homepage-link" href="/online/background-check/">Background Check</a></dd>
-            <dd><a class="homepage-link" href="/finance/banks.htm">Banks &amp; Credit Unions</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/barbecue-grills/">Barbecue Grills </a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_plumbing.html">Bath &amp; Plumbing</a></dd>
-            <dd><a class="homepage-link" href="/education/beauty-schools/">Beauty Schools</a></dd>
-            <dd><a class="homepage-link" href="/boats/index.html">Boats</a></dd>
-            <dd><a class="homepage-link" href="/health/breast-pumps/">Breast Pumps</a></dd>
-            <dd><a class="homepage-link" href="/insurance/business-insurance/">Business Insurance</a></dd>
-            <dd><a class="homepage-link" href="/business-loans-and-financing/">Business Loans </a></dd>
-            <dd><a class="homepage-link" href="/business/index.html">Business Services</a></dd>
+            <dd><a href="/online/background-check/">Background Check</a></dd>
+            <dd><a href="/finance/banks.htm">Banks &amp; Credit Unions</a></dd>
+            <dd><a href="/homeowners/barbecue-grills/">Barbecue Grills </a></dd>
+            <dd><a href="/homeowners/aaa_plumbing.html">Bath &amp; Plumbing</a></dd>
+            <dd><a href="/education/beauty-schools/">Beauty Schools</a></dd>
+            <dd><a href="/boats/index.html">Boats</a></dd>
+            <dd><a href="/health/breast-pumps/">Breast Pumps</a></dd>
+            <dd><a href="/insurance/business-insurance/">Business Insurance</a></dd>
+            <dd><a href="/business-loans-and-financing/">Business Loans </a></dd>
+            <dd><a href="/business/index.html">Business Services</a></dd>
             <dt>C</dt>
-            <dd><a class="homepage-link" href="/cable_tv/cable.htm">Cable &amp; Satellite TV Providers</a></dd>
-            <dd><a class="homepage-link" href="/cameras/index.html">Cameras</a></dd>
-            <dd><a class="homepage-link" href="/employment/index.html">Careers</a></dd>
-            <dd><a class="homepage-link" href="/pets/cat-food/">Cat Food</a></dd>
-            <dd><a class="homepage-link" href="/cell_phones/cell_phones.htm">Cell Phones</a></dd>
-            <dd><a class="homepage-link" href="/food/chain-restaurants/">Chain Restaurants</a></dd>
-            <dd><a class="homepage-link" href="/computers/computers.htm">Computers </a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_contractors.html">Contractors &amp; Handymen</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/cookware.html">Cookware</a></dd>
-            <dd><a class="homepage-link" href="/health/cord-blood/">Cord Blood Banking</a></dd>
-            <dd><a class="homepage-link" href="/cosmetics/cosmetics.htm">Cosmetics</a></dd>
-            <dd><a class="homepage-link" href="/credit_cards/credit_cards.htm">Credit Cards</a></dd>
-            <dd><a class="homepage-link" href="/online/credit-report/">Credit Report Sites</a></dd>
-            <dd><a class="homepage-link" href="/travel/cruises.html">Cruise Lines</a></dd>
+            <dd><a href="/cable_tv/cable.htm">Cable &amp; Satellite TV Providers</a></dd>
+            <dd><a href="/cameras/index.html">Cameras</a></dd>
+            <dd><a href="/employment/index.html">Careers</a></dd>
+            <dd><a href="/pets/cat-food/">Cat Food</a></dd>
+            <dd><a href="/cell_phones/cell_phones.htm">Cell Phones</a></dd>
+            <dd><a href="/food/chain-restaurants/">Chain Restaurants</a></dd>
+            <dd><a href="/computers/computers.htm">Computers </a></dd>
+            <dd><a href="/homeowners/aaa_contractors.html">Contractors &amp; Handymen</a></dd>
+            <dd><a href="/homeowners/cookware.html">Cookware</a></dd>
+            <dd><a href="/health/cord-blood/">Cord Blood Banking</a></dd>
+            <dd><a href="/cosmetics/cosmetics.htm">Cosmetics</a></dd>
+            <dd><a href="/credit_cards/credit_cards.htm">Credit Cards</a></dd>
+            <dd><a href="/online/credit-report/">Credit Report Sites</a></dd>
+            <dd><a href="/travel/cruises.html">Cruise Lines</a></dd>
             <dt>D</dt>
-            <dd><a class="homepage-link" href="/online/daily-deal-websites">Daily Deal Websites</a></dd>
-            <dd><a class="homepage-link" href="/debt_counsel/index.html">Debt Consolidation</a></dd>
-            <dd><a class="homepage-link" href="/delivery/index.html">Delivery Services</a></dd>
-            <dd><a class="homepage-link" href="/dentists/index.html">Dentists</a></dd>
-            <dd><a class="homepage-link" href="/insurance/dis.html">Disability Insurance</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/dishwashers">Dishwashers</a></dd>
-            <dd><a class="homepage-link" href="/doctors/index.html">Doctors</a></dd>
-            <dd><a class="homepage-link" href="/computers/document-scanners/">Document Scanners</a></dd>
-            <dd><a class="homepage-link" href="/pets/pet-food">Dog Food</a></dd>
-            <dd><a class="homepage-link" href="/health/drug-and-alcohol-rehab-centers">Drug and Alcohol Rehab </a></dd>
+            <dd><a href="/online/daily-deal-websites">Daily Deal Websites</a></dd>
+            <dd><a href="/debt_counsel/index.html">Debt Consolidation</a></dd>
+            <dd><a href="/delivery/index.html">Delivery Services</a></dd>
+            <dd><a href="/dentists/index.html">Dentists</a></dd>
+            <dd><a href="/insurance/dis.html">Disability Insurance</a></dd>
+            <dd><a href="/homeowners/dishwashers">Dishwashers</a></dd>
+            <dd><a href="/doctors/index.html">Doctors</a></dd>
+            <dd><a href="/computers/document-scanners/">Document Scanners</a></dd>
+            <dd><a href="/pets/pet-food">Dog Food</a></dd>
+            <dd><a href="/health/drug-and-alcohol-rehab-centers">Drug and Alcohol Rehab </a></dd>
             <dt>E</dt>
-            <dd><a class="homepage-link" href="/e-cigarettes/">E-Cigarettes</a></dd>
-            <dd><a class="homepage-link" href="/ecommerce-software/">eCommerce Software</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_electrical.html">Electrical &amp; Lighting Systems</a></dd>
-            <dd><a class="homepage-link" href="/emr-software/">Electronic Health Records (EHR) Software</a></dd>
-            <dd><a class="homepage-link" href="/online/electronic-signature-software/">Electronic Signature Software</a></dd>
-            <dd><a class="homepage-link" href="/employment/employee-incentive-programs/">Employee Incentive Programs</a></dd>
-            <dd><a class="homepage-link" href="/entertainment/entertainment.htm">Entertainment</a></dd>
-            <dd><a class="homepage-link" href="/business/expense-management-software/">Expense Management Software</a></dd>
-            <dd><a class="homepage-link" href="/eyeglasses/index.html">Eyeglasses</a></dd>
+            <dd><a href="/e-cigarettes/">E-Cigarettes</a></dd>
+            <dd><a href="/ecommerce-software/">eCommerce Software</a></dd>
+            <dd><a href="/homeowners/aaa_electrical.html">Electrical &amp; Lighting Systems</a></dd>
+            <dd><a href="/emr-software/">Electronic Health Records (EHR) Software</a></dd>
+            <dd><a href="/online/electronic-signature-software/">Electronic Signature Software</a></dd>
+            <dd><a href="/employment/employee-incentive-programs/">Employee Incentive Programs</a></dd>
+            <dd><a href="/entertainment/entertainment.htm">Entertainment</a></dd>
+            <dd><a href="/business/expense-management-software/">Expense Management Software</a></dd>
+            <dd><a href="/eyeglasses/index.html">Eyeglasses</a></dd>
             <dt>F</dt>
-            <dd><a class="homepage-link" href="/health/fitness-equipment">Fitness Equipment</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_flooring.html">Flooring &amp; Carpet</a></dd>
-            <dd><a class="homepage-link" href="/online/flower-delivery">Flower Delivery</a></dd>
-            <dd><a class="homepage-link" href="/food/index.html">Food Products</a></dd>
-            <dd><a class="homepage-link" href="/furniture/aaa_national.html">Furniture Stores</a></dd>
+            <dd><a href="/health/fitness-equipment">Fitness Equipment</a></dd>
+            <dd><a href="/homeowners/aaa_flooring.html">Flooring &amp; Carpet</a></dd>
+            <dd><a href="/online/flower-delivery">Flower Delivery</a></dd>
+            <dd><a href="/food/index.html">Food Products</a></dd>
+            <dd><a href="/furniture/aaa_national.html">Furniture Stores</a></dd>
             <dt>H</dt>
-            <dd><a class="homepage-link" href="/health_clubs/clubs.htm">Health Clubs</a></dd>
-            <dd><a class="homepage-link" href="/insurance/health.html">Health Insurance</a></dd>
-            <dd><a class="homepage-link" href="/health/products-and-supplements">Health Products</a></dd>
-            <dd><a class="homepage-link" href="/health/hearing/index.html">Hearing Aids</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_heating_cooling.html">Heating &amp; Cooling Systems</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/home-automation/">Home Automation</a></dd>
-            <dd><a class="homepage-link" href="/housing/aaa_builders.html">Home Builders &amp; Developers</a></dd>
-            <dd><a class="homepage-link" href="/health/in-home-care">Home Care Services</a></dd>
-            <dd><a class="homepage-link" href="/home_electronics/index.html">Home Electronics</a></dd>
-            <dd><a class="homepage-link" href="/online/home-health-care-software">Home Health Care Software</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_warranties.html">Home Warranties, Service Plans</a></dd>
-            <dd><a class="homepage-link" href="/insurance/home.html">Homeowners Insurance</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/hot-tubs/">Hot Tubs</a></dd>
-            <dd><a class="homepage-link" href="/travel/hotels.html">Hotels, Resorts &amp; Inns</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/hvac-contractors-and-repair/">HVAC Services</a></dd>
+            <dd><a href="/health_clubs/clubs.htm">Health Clubs</a></dd>
+            <dd><a href="/insurance/health.html">Health Insurance</a></dd>
+            <dd><a href="/health/products-and-supplements">Health Products</a></dd>
+            <dd><a href="/health/hearing/index.html">Hearing Aids</a></dd>
+            <dd><a href="/homeowners/aaa_heating_cooling.html">Heating &amp; Cooling Systems</a></dd>
+            <dd><a href="/homeowners/home-automation/">Home Automation</a></dd>
+            <dd><a href="/housing/aaa_builders.html">Home Builders &amp; Developers</a></dd>
+            <dd><a href="/health/in-home-care">Home Care Services</a></dd>
+            <dd><a href="/home_electronics/index.html">Home Electronics</a></dd>
+            <dd><a href="/online/home-health-care-software">Home Health Care Software</a></dd>
+            <dd><a href="/homeowners/aaa_warranties.html">Home Warranties, Service Plans</a></dd>
+            <dd><a href="/insurance/home.html">Homeowners Insurance</a></dd>
+            <dd><a href="/homeowners/hot-tubs/">Hot Tubs</a></dd>
+            <dd><a href="/travel/hotels.html">Hotels, Resorts &amp; Inns</a></dd>
+            <dd><a href="/homeowners/hvac-contractors-and-repair/">HVAC Services</a></dd>
             <dt>I</dt>
-            <dd><a class="homepage-link" href="/privacy/index.html">Identity Theft Protection</a></dd>
-            <dd><a class="homepage-link" href="/in_home/in_home_sales.htm">In Home Shopping</a></dd>
-            <dd><a class="homepage-link" href="/movers/international-moving-companies/">International Moving Companies</a></dd>
-            <dd><a class="homepage-link" href="/internet/internet_services.htm">Internet Service Providers</a></dd>
-            <dd><a class="homepage-link" href="/invention-services/">Invention and Patent Services</a></dd>
-            <dd><a class="homepage-link" href="/finance/investment-banks/">Investment Banks</a></dd>
-            <dd><a class="homepage-link" href="/finance/invest.html">Investments</a></dd>
+            <dd><a href="/privacy/index.html">Identity Theft Protection</a></dd>
+            <dd><a href="/in_home/in_home_sales.htm">In Home Shopping</a></dd>
+            <dd><a href="/movers/international-moving-companies/">International Moving Companies</a></dd>
+            <dd><a href="/internet/internet_services.htm">Internet Service Providers</a></dd>
+            <dd><a href="/invention-services/">Invention and Patent Services</a></dd>
+            <dd><a href="/finance/investment-banks/">Investment Banks</a></dd>
+            <dd><a href="/finance/invest.html">Investments</a></dd>
             <dt>J</dt>
-            <dd><a class="homepage-link" href="/jewelry/index.html">Jewelry Stores</a></dd>
+            <dd><a href="/jewelry/index.html">Jewelry Stores</a></dd>
             <dt>L</dt>
-            <dd><a class="homepage-link" href="/lasik-surgery-providers/">LASIK Surgery </a></dd>
-            <dd><a class="homepage-link" href="/homeowners/garden.html">Lawn &amp; Garden</a></dd>
-            <dd><a class="homepage-link" href="/legal/index.html">Lawyers &amp; Legal Services</a></dd>
-            <dd><a class="homepage-link" href="/insurance/life.html">Life Insurance</a></dd>
-            <dd><a class="homepage-link" href="/finance/loan_companies.html">Loan Companies</a></dd>
-            <dd><a class="homepage-link" href="/finance/loan-modification">Loan Modifications</a></dd>
-            <dd><a class="homepage-link" href="/cell_phones/local_phone.htm">Local Telephone Service</a></dd>
-            <dd><a class="homepage-link" href="/cell_phones/long_dist.htm">Long Distance Service</a></dd>
-            <dd><a class="homepage-link" href="/insurance/ltc.html">Long Term Care Insurance</a></dd>
+            <dd><a href="/lasik-surgery-providers/">LASIK Surgery </a></dd>
+            <dd><a href="/homeowners/garden.html">Lawn &amp; Garden</a></dd>
+            <dd><a href="/legal/index.html">Lawyers &amp; Legal Services</a></dd>
+            <dd><a href="/insurance/life.html">Life Insurance</a></dd>
+            <dd><a href="/finance/loan_companies.html">Loan Companies</a></dd>
+            <dd><a href="/finance/loan-modification">Loan Modifications</a></dd>
+            <dd><a href="/cell_phones/local_phone.htm">Local Telephone Service</a></dd>
+            <dd><a href="/cell_phones/long_dist.htm">Long Distance Service</a></dd>
+            <dd><a href="/insurance/ltc.html">Long Term Care Insurance</a></dd>
             <dt>M</dt>
-            <dd><a class="homepage-link" href="/dating_services/matchmaker/">Matchmaking Services</a></dd>
-            <dd><a class="homepage-link" href="/furniture/aaa_mattresses.html">Mattresses</a></dd>
-            <dd><a class="homepage-link" href="/medical-alert-systems/">Medical Alert Systems</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/microwaves">Microwaves</a></dd>
-            <dd><a class="homepage-link" href="/misc/index.html">Miscellaneous</a></dd>
-            <dd><a class="homepage-link" href="/modeling/index.html">Modeling &amp; Talent Agencies</a></dd>
-            <dd><a class="homepage-link" href="/mold-removal/">Mold Removal and Remediation</a></dd>
-            <dd><a class="homepage-link" href="/finance/finance__companies.htm">Mortgages &amp; Loan Modification</a></dd>
-            <dd><a class="homepage-link" href="/insurance/motorcycle-insurance/">Motorcycle Insurance</a></dd>
-            <dd><a class="homepage-link" href="/movers/index.html">Movers</a></dd>
+            <dd><a href="/dating_services/matchmaker/">Matchmaking Services</a></dd>
+            <dd><a href="/furniture/aaa_mattresses.html">Mattresses</a></dd>
+            <dd><a href="/medical-alert-systems/">Medical Alert Systems</a></dd>
+            <dd><a href="/homeowners/microwaves">Microwaves</a></dd>
+            <dd><a href="/misc/index.html">Miscellaneous</a></dd>
+            <dd><a href="/modeling/index.html">Modeling &amp; Talent Agencies</a></dd>
+            <dd><a href="/mold-removal/">Mold Removal and Remediation</a></dd>
+            <dd><a href="/finance/finance__companies.htm">Mortgages &amp; Loan Modification</a></dd>
+            <dd><a href="/insurance/motorcycle-insurance/">Motorcycle Insurance</a></dd>
+            <dd><a href="/movers/index.html">Movers</a></dd>
             <dt>N</dt>
-            <dd><a class="homepage-link" href="/nursing_homes/index.html">Nursing Homes</a></dd>
+            <dd><a href="/nursing_homes/index.html">Nursing Homes</a></dd>
             <dt>O</dt>
-            <dd><a class="homepage-link" href="/business/online-billing">Online Billing</a></dd>
-            <dd><a class="homepage-link" href="/education/online-colleges/">Online Colleges</a></dd>
-            <dd><a class="homepage-link" href="/education/online-courses">Online Course Websites</a></dd>
-            <dd><a class="homepage-link" href="/dating_services/index.html">Online Dating</a></dd>
-            <dd><a class="homepage-link" href="/finance/financial-planning/">Online Financial Advisors</a></dd>
-            <dd><a class="homepage-link" href="/education/online-high-schools/">Online High Schools</a></dd>
-            <dd><a class="homepage-link" href="/online/online_sales.htm">Online Shopping</a></dd>
+            <dd><a href="/business/online-billing">Online Billing</a></dd>
+            <dd><a href="/education/online-colleges/">Online Colleges</a></dd>
+            <dd><a href="/education/online-courses">Online Course Websites</a></dd>
+            <dd><a href="/dating_services/index.html">Online Dating</a></dd>
+            <dd><a href="/finance/financial-planning/">Online Financial Advisors</a></dd>
+            <dd><a href="/education/online-high-schools/">Online High Schools</a></dd>
+            <dd><a href="/online/online_sales.htm">Online Shopping</a></dd>
             <dt>P</dt>
-            <dd><a class="homepage-link" href="/movers/storage_lockers.html">Packing &amp; Storage Services</a></dd>
-            <dd><a class="homepage-link" href="/internet/password-managers">Password Manager</a></dd>
-            <dd><a class="homepage-link" href="/finance/payday.html">Payday &amp; Title Loans</a></dd>
-            <dd><a class="homepage-link" href="/finance/personal-loans/">Personal Loans</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_pest_control.html">Pest Control</a></dd>
-            <dd><a class="homepage-link" href="/pets/pet-breeders">Pet Breeders</a></dd>
-            <dd><a class="homepage-link" href="/pets/pet-care">Pet Care</a></dd>
-            <dd><a class="homepage-link" href="/pets/pet-insurance">Pet Insurance</a></dd>
-            <dd><a class="homepage-link" href="/pets/pet-stores">Pet Stores</a></dd>
-            <dd><a class="homepage-link" href="/rx/pharmaceuticals/">Pharmaceuticals</a></dd>
-            <dd><a class="homepage-link" href="/rx/drugs.htm">Pharmacies</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/pools.html">Pool Companies</a></dd>
-            <dd><a class="homepage-link" href="/pos-systems/">POS Systems</a></dd>
-            <dd><a class="homepage-link" href="/finance/prepaid-debit-cards/">Prepaid Debit Cards</a></dd>
-            <dd><a class="homepage-link" href="/computers/printers/">Printers</a></dd>
-            <dd><a class="homepage-link" href="/business/project-management-software/">Project Management Software</a></dd>
-            <dd><a class="homepage-link" href="/misc/publications/">Publications</a></dd>
+            <dd><a href="/movers/storage_lockers.html">Packing &amp; Storage Services</a></dd>
+            <dd><a href="/internet/password-managers">Password Manager</a></dd>
+            <dd><a href="/finance/payday.html">Payday &amp; Title Loans</a></dd>
+            <dd><a href="/finance/personal-loans/">Personal Loans</a></dd>
+            <dd><a href="/homeowners/aaa_pest_control.html">Pest Control</a></dd>
+            <dd><a href="/pets/pet-breeders">Pet Breeders</a></dd>
+            <dd><a href="/pets/pet-care">Pet Care</a></dd>
+            <dd><a href="/pets/pet-insurance">Pet Insurance</a></dd>
+            <dd><a href="/pets/pet-stores">Pet Stores</a></dd>
+            <dd><a href="/rx/pharmaceuticals/">Pharmaceuticals</a></dd>
+            <dd><a href="/rx/drugs.htm">Pharmacies</a></dd>
+            <dd><a href="/homeowners/pools.html">Pool Companies</a></dd>
+            <dd><a href="/pos-systems/">POS Systems</a></dd>
+            <dd><a href="/finance/prepaid-debit-cards/">Prepaid Debit Cards</a></dd>
+            <dd><a href="/computers/printers/">Printers</a></dd>
+            <dd><a href="/business/project-management-software/">Project Management Software</a></dd>
+            <dd><a href="/misc/publications/">Publications</a></dd>
             <dt>R</dt>
-            <dd><a class="homepage-link" href="/homeowners/ranges-ovens-stoves">Ranges/Ovens/Stoves</a></dd>
-            <dd><a class="homepage-link" href="/housing/aaa_realtors.html">Realtors</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/refrigerators">Refrigerators</a></dd>
-            <dd><a class="homepage-link" href="/travel/car_rental.html">Rental Cars</a></dd>
-            <dd><a class="homepage-link" href="/insurance/renters-insurance/">Renters Insurance</a></dd>
-            <dd><a class="homepage-link" href="/retail/national_chains.htm">Retail Stores</a></dd>
-            <dd><a class="homepage-link" href="/reverse-mortgages/">Reverse Mortgages</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_roofing.html">Roofing &amp; Siding</a></dd>
+            <dd><a href="/homeowners/ranges-ovens-stoves">Ranges/Ovens/Stoves</a></dd>
+            <dd><a href="/housing/aaa_realtors.html">Realtors</a></dd>
+            <dd><a href="/homeowners/refrigerators">Refrigerators</a></dd>
+            <dd><a href="/travel/car_rental.html">Rental Cars</a></dd>
+            <dd><a href="/insurance/renters-insurance/">Renters Insurance</a></dd>
+            <dd><a href="/retail/national_chains.htm">Retail Stores</a></dd>
+            <dd><a href="/reverse-mortgages/">Reverse Mortgages</a></dd>
+            <dd><a href="/homeowners/aaa_roofing.html">Roofing &amp; Siding</a></dd>
             <dt>S</dt>
-            <dd><a class="homepage-link" href="/age/aging.htm">Seniors</a></dd>
-            <dd><a class="homepage-link" href="/solar-energy/">Solar Energy</a></dd>
-            <dd><a class="homepage-link" href="/sporting_goods/index.html">Sporting Goods</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/stairlifts/">Stair Lifts</a></dd>
-            <dd><a class="homepage-link" href="/steel-buildings/">Steel Buildings</a></dd>
-            <dd><a class="homepage-link" href="/finance/structured-settlement/">Structured Settlement</a></dd>
-            <dd><a class="homepage-link" href="/finance/student_loans.html">Student Loans</a></dd>
+            <dd><a href="/age/aging.htm">Seniors</a></dd>
+            <dd><a href="/solar-energy/">Solar Energy</a></dd>
+            <dd><a href="/sporting_goods/index.html">Sporting Goods</a></dd>
+            <dd><a href="/homeowners/stairlifts/">Stair Lifts</a></dd>
+            <dd><a href="/steel-buildings/">Steel Buildings</a></dd>
+            <dd><a href="/finance/structured-settlement/">Structured Settlement</a></dd>
+            <dd><a href="/finance/student_loans.html">Student Loans</a></dd>
             <dt>T</dt>
-            <dd><a class="homepage-link" href="/finance/tax-relief">Tax Relief</a></dd>
-            <dd><a class="homepage-link" href="/finance/tax_prep.html">Tax Software and Services</a></dd>
-            <dd><a class="homepage-link" href="/tech-support-services/">Tech Support Services</a></dd>
-            <dd><a class="homepage-link" href="/texas-electricity-companies/">Texas Electricity Companies</a></dd>
-            <dd><a class="homepage-link" href="/travel/timeshares.html">Timeshares</a></dd>
-            <dd><a class="homepage-link" href="/tires/index.html">Tires</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/diy-tools.html">Tools, Paints, and Parts</a></dd>
-            <dd><a class="homepage-link" href="/toys/index.html">Toys and Children's Products</a></dd>
-            <dd><a class="homepage-link" href="/travel/agencies.html">Travel Agencies</a></dd>
-            <dd><a class="homepage-link" href="/insurance/travel-insurance/">Travel Insurance</a></dd>
-            <dd><a class="homepage-link" href="/education/tutoring/">Tutoring</a></dd>
+            <dd><a href="/finance/tax-relief">Tax Relief</a></dd>
+            <dd><a href="/finance/tax_prep.html">Tax Software and Services</a></dd>
+            <dd><a href="/tech-support-services/">Tech Support Services</a></dd>
+            <dd><a href="/texas-electricity-companies/">Texas Electricity Companies</a></dd>
+            <dd><a href="/travel/timeshares.html">Timeshares</a></dd>
+            <dd><a href="/tires/index.html">Tires</a></dd>
+            <dd><a href="/homeowners/diy-tools.html">Tools, Paints, and Parts</a></dd>
+            <dd><a href="/toys/index.html">Toys and Children's Products</a></dd>
+            <dd><a href="/travel/agencies.html">Travel Agencies</a></dd>
+            <dd><a href="/insurance/travel-insurance/">Travel Insurance</a></dd>
+            <dd><a href="/education/tutoring/">Tutoring</a></dd>
             <dt>U</dt>
-            <dd><a class="homepage-link" href="/utilities/utilities.html">Utilities</a></dd>
+            <dd><a href="/utilities/utilities.html">Utilities</a></dd>
             <dt>V</dt>
-            <dd><a class="homepage-link" href="/homeowners/vacuums">Vacuums</a></dd>
-            <dd><a class="homepage-link" href="/pets/pet-vets">Veterinarians</a></dd>
-            <dd><a class="homepage-link" href="/cell_phones/voip.html">VOIP</a></dd>
+            <dd><a href="/homeowners/vacuums">Vacuums</a></dd>
+            <dd><a href="/pets/pet-vets">Veterinarians</a></dd>
+            <dd><a href="/cell_phones/voip.html">VOIP</a></dd>
             <dt>W</dt>
-            <dd><a class="homepage-link" href="/homeowners/walk-in-bathtubs">Walk-In Bathtubs</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/washers-and-dryers">Washers &amp; Dryers</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/water-treatment-systems/">Water Treatment Systems</a></dd>
-            <dd><a class="homepage-link" href="/web-hosting/">Web Hosting Companies</a></dd>
-            <dd><a class="homepage-link" href="/weddings/weddings.htm">Weddings</a></dd>
-            <dd><a class="homepage-link" href="/nutrition/nutrition.htm">Weight Loss Programs</a></dd>
-            <dd><a class="homepage-link" href="/homeowners/aaa_windows.html">Windows &amp; Doors</a></dd>
+            <dd><a href="/homeowners/walk-in-bathtubs">Walk-In Bathtubs</a></dd>
+            <dd><a href="/homeowners/washers-and-dryers">Washers &amp; Dryers</a></dd>
+            <dd><a href="/homeowners/water-treatment-systems/">Water Treatment Systems</a></dd>
+            <dd><a href="/web-hosting/">Web Hosting Companies</a></dd>
+            <dd><a href="/weddings/weddings.htm">Weddings</a></dd>
+            <dd><a href="/nutrition/nutrition.htm">Weight Loss Programs</a></dd>
+            <dd><a href="/homeowners/aaa_windows.html">Windows &amp; Doors</a></dd>
           </dl>
         </section>
       </main>
@@ -427,7 +454,7 @@
     </div>
   </div>
 
-
+  <!--  -->
 
   <!-- CONSUMERAFFAIRS LOGO -->
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="310px" height="26px" viewBox="0 0 310 26" enable-background="new 0 0 310 26" xml:space="preserve">

@@ -1,0 +1,18 @@
+/* ░░ Content ░░░░░░░░░
+============================================*/
+
+::-moz-selection{ background:$themeGreyLight; color:$white; }
+::selection { background:$themeGreyLight; color:$white; }
+
+a {
+	color: $linkColor;
+	//
+	&:hover {
+		color: $linkHover;
+		text-decoration: underline;
+	}
+}
+
+p {
+	font-size: 1em;
+}
