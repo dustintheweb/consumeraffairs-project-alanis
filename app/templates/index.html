@@ -1,167 +1,55 @@
 <!doctype html>
 <head>
-  <!-- @include modules/head-meta.html -->
+    <!-- @include modules/meta.html -->
 
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
-  <link rel="dns-prefetch" href="//www.google-analytics.com">
-  <!-- build:css styles/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 
-  <!-- add critical css here -->
+    <!-- add critical css here -->
 
 </head>
 <body>
-  <div class="base">
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <header role="banner">
-      <div class="primary">
-        <div class="logo">
-          <a href="/">
-            <!-- @include modules/consumer_logo.html -->
-          </a>
+    <div class="base">
+        <!--[if IE]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- @include modules/header.html -->
+        <div class="core">
+            <main role="main">
+                <!-- @include modules/home-hero.html -->
+                <!-- @include modules/home-media-banner.html -->
+                <!-- @include modules/home-metro-grid.html -->
+                <!-- @include modules/home-brands-tout.html -->
+                <!-- @include modules/home-list-grid.html -->
+            </main>
+            <!-- @include modules/footer.html -->
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="">ConsumerAffairs</a>
-            <li>
-              <a href="">Consumer News</a>
-            <li>
-              <a href="">Consumer Resources</a>
-          </ul>
-        </nav>
-      </div>
-      <div class="secondary">
-        <div class="inner">
-          <!-- <div class="search">
-            <form>
-              <input type="text">
-              <button type="submit">
-                <svg class="icon-search" viewBox="0 0 32 32">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/images/img.svg#icon-search"></use>
-                </svg>
-              </button>
-            </form>
-
-          </div> -->
-          <!-- @include modules/searchbar.html -->
-
-          <!-- <div class="hamburger-menu-button">
-            <div class="primary" data-ng-class="{active:active}" data-ng-mobile-click="mobileSideNavToggle(); activeToggle();">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </div>
-          </div> -->
-
-          <!-- <div class="sub-container">
-            <div class="row">
-              <div class="item">
-                <div class="avatar" data-ng-multi-transclude-controller="">
-                  <a href="/">
-                    <ins data-ng-multi-transclude="pre-label"></ins>
-                    <span class="avatar-thumb">
-                      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/dustintheweb/73.jpg" alt=""> </span>
-                    <ins data-ng-multi-transclude="post-label"></ins>
-                  </a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="notification" data-ng-multi-transclude-controller="">
-                  <a href="/">
-                    <ins data-ng-multi-transclude="pre-label"></ins>
-                    <span class="digit">3</span>
-                    <ins data-ng-multi-transclude="post-label"></ins>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <nav>
-              <ul>
-                <li> <a href="">user info</a> </li>
-                <li> <a href="">notifications</a> </li>
-                <li data-ng-class="{active:page('/archive')}"> <a href="/archive">Archive</a> </li>
-                <li data-ng-class="{active:page('/faq')}"> <a href="/faq">FAQ</a> </li>
-                <li data-ng-class="{active:page('/contact')}"> <a href="/contact">Contact Us</a> </li>
-                <li data-ng-class="{active:page('/newsletter')}"> <a href="/newsletter">Newsletter</a> </li>
-              </ul>
-            </nav>
-          </div>
-
-
-
-        -->
-        <!-- @include modules/newsletter_form.html -->
-        </div>
-      </div>
-    </header>
-
-    <div class="core">
-      <main role="main">
-        <!--  -->
-        <section class="hero home-hero">
-          <figure class="row">
-            <figcaption class="inner">
-              <div class="primary">
-                <h1>
-                  Headline
-                </h1>
-                <h2>
-                  Subheadline
-                </h2>
-              </div>
-            </figcaption>
-          </figure>
-          <div class="disclosure">
-            <iframe scrolling="no" src="http://www.consumeraffairs.com/disclosure.html?context=home"></iframe>
-          </div>
-        </section>
-
-        <!-- @include modules/home-hero.html -->
-
-        <!-- @include modules/home-metro-grid.html -->
-
-        <!-- @include modules/home-brands-tout.html -->
-
-        <!-- @include modules/home-list-grid.html -->
-
-      </main>
-      <footer role="contentinfo" class="row">
-        footer stuff
-      </footer>
     </div>
-  </div>
 
-    <!-- @include modules/searchbar.html -->
-
-    <!-- @include modules/featured_in.html -->
-
-
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
     (function(b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l;
-      b[l] || (b[l] =
-        function() {
-          (b[l].q = b[l].q || []).push(arguments)
-        });
-      b[l].l = +new Date;
-      e = o.createElement(i);
-      r = o.getElementsByTagName(i)[0];
-      e.src = 'https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-  </script>
-
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>

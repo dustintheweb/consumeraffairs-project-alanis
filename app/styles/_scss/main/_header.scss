@@ -2,5 +2,10 @@
 // endbower
 
 header {
+  height: 60px;
   background: $ca-blue;
+
+  * {
+	   display: none;
+  }
 }
