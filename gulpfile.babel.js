@@ -103,7 +103,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/*.html',
+    'app/**/*.html',
     'app/scripts/**/*.js',
     'app/media/images/**/*',
     'app/styles/css/**/*.css',
@@ -113,7 +113,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch('app/styles/_scss/**/*.scss', ['styles']);
   gulp.watch('app/styles/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
-  gulp.watch('app/html/**/*', ['preprocess-html'])
+  gulp.watch('app/html/**/*.html', ['preprocess-html'])
 });
 
 gulp.task('serve:dist', () => {
@@ -158,7 +158,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'preprocess-html', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
@@ -167,7 +167,7 @@ gulp.task('default', ['clean'], () => {
 });
 
 gulp.task('preprocess-html', () => {
-  return gulp.src('app/**/*.html')
-  .pipe(preprocess({context: { NODE_ENV: 'production', DEBUG: true}})) //To set environment variables in-line
+  return gulp.src('app/html/index.html')
+  .pipe(preprocess())
   .pipe(gulp.dest('app'))
 });
