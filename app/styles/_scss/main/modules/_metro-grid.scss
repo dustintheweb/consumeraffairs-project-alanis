@@ -5,8 +5,7 @@
 .metro-grid {
 	background: $off-white;
 	.inner {
-		margin: 0 auto;
-		max-width: 1200px;
+		@include max-content-width;
 		text-align: center;
 	}
 	ul {
