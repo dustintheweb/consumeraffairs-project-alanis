@@ -113,7 +113,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch('app/styles/_scss/**/*.scss', ['styles']);
   gulp.watch('app/styles/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
-  gulp.watch('app/html/**/*.html', ['preprocess-html'])
+  gulp.watch('app/templates/**/*.html', ['preprocess-html'])
 });
 
 gulp.task('serve:dist', () => {
@@ -167,7 +167,7 @@ gulp.task('default', ['clean'], () => {
 });
 
 gulp.task('preprocess-html', () => {
-  return gulp.src('app/html/index.html')
+  return gulp.src('app/templates/index.html')
   .pipe(preprocess())
   .pipe(gulp.dest('app'))
 });
