@@ -1,5 +1,5 @@
-/*global $, jQuery, app:true, Modernizr, History, FastClick, emojione*/
-/*jshint unused:false*/
+/*global $, jQuery, app:true, Modernizr, FastClick */
+/*some_used_var:false*/
 /*jshint multistr:true*/
 'use strict';
 
