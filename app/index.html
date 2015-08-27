@@ -643,34 +643,23 @@
             
         </div>
     </div>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-    (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function() {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = 'https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-XXXXX-X');
-        ga('send', 'pageview');
-    </script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/enquire/dist/enquire.js"></script>
     <!-- endbower -->
+    <script src="/scripts/libs/layout.engine.js"></script>
+    <script src="/scripts/libs/ios-orientationchange-fix.js"></script>
+    <script src="/scripts/libs/jquery.ba-throttle-debounce.js"></script>
+    <script src="/scripts/libs/jquery.easing.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/main/modules/accordion.js -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="/scripts/main/config/enquire-config.js"></script>
+    <script src="/scripts/main/config/analytics.js"></script>
     <!-- endbuild -->
 </body>
 </html>
