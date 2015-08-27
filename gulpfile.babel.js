@@ -4,6 +4,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import preprocess from 'gulp-preprocess';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -111,6 +112,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
+  gulp.watch('app/html/**/*', ['preprocess-html'])
 });
 
 gulp.task('serve:dist', () => {
@@ -161,4 +163,10 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
+});
+
+gulp.task('preprocess-html', () => {
+  return gulp.src('app/**/*.html')
+  .pipe(preprocess({context: { NODE_ENV: 'production', DEBUG: true}})) //To set environment variables in-line
+  .pipe(gulp.dest('app'))
 });
