@@ -67,5 +67,5 @@ var app = {
 // -- fastclick ---------------
 	//FastClick.attach(document.body);
 
-	$('.newsletter').accordion({content:'> [class$="wrapper"]'});
+	$('.newsletter').accordion({content: '> [class$="wrapper"]'});
 })(jQuery);
