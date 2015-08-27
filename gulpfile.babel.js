@@ -103,13 +103,12 @@ gulp.task('serve', ['preprocess-html', 'styles', 'fonts'], () => {
   });
 
   gulp.watch([
-    'app/**/*.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/templates/**/*.html', ['preprocess-html']);
+  gulp.watch('app/templates/**/*.html', ['preprocess-html', reload]);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);

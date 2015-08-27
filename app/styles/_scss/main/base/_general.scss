@@ -11,31 +11,31 @@ $max-width: 1200px;
 
 // Typography helpers
 .lowercase {
-  text-transform: lowercase;
+    text-transform: lowercase;
 }
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 // Image replacement
 %ir {
-  border:0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
+    border:0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background-color: transparent;
 }
 
 // Clearfix
 .cf:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 // Remove
 .hide {
-  display:none;
+    display:none;
 }
 .show {
     display: block;
@@ -43,41 +43,41 @@ $max-width: 1200px;
 
 // Visibility
 .visible {
-  visibility: visible;
+    visibility: visible;
 }
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 // Hide from everything but screen readers
 .visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  border: 0;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
     //
     &.focusable:active, &.focusable:focus {
-      position: static;
-      overflow: visible;
-      clip: auto;
-      margin: 0;
-      width: auto;
-      height: auto;
+        position: static;
+        overflow: visible;
+        clip: auto;
+        margin: 0;
+        width: auto;
+        height: auto;
     }
-  }
+}
 
 // zindex
 .zindex-top {
-  z-index: 1000;
+    z-index: 1000;
 }
 
 // kick in gpu render
 .gpu {
-  backface-visibility:hidden;
-  transform-style: flat;
-  transform: translateZ(0);
+    backface-visibility:hidden;
+    transform-style: flat;
+    transform: translateZ(0);
 }

@@ -15,7 +15,7 @@
 	}
 	li {
 		position:relative;
-		@media screen and (min-width: 600px) {
+		@include responsive-sm {
 			display:inline-block;
 		}
 		span {
@@ -27,3 +27,6 @@
 	}
 }
 // variants
+.home-metro-grid {
+
+}
