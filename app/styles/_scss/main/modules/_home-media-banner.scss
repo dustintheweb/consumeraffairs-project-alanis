@@ -1,0 +1,29 @@
+.home-media-banner{
+    background: $off-white;
+    padding: $gutter $gutter 0;
+    display: none;
+
+	.inner {
+		@include max-content-width;
+		text-align: center;
+	}
+    .label{
+        color: $greyDark;
+    }
+
+    @include responsive-sm {
+        display: block;
+    }
+    @include responsive-md {
+        .label{
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: $gutter;
+        }
+        .media-logos{
+            display: inline-block;
+            vertical-align: middle;
+            width: 88%;
+        }
+    }
+}
