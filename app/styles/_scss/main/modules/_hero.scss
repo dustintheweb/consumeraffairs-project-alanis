@@ -8,3 +8,51 @@
 .home-hero {
 
 }
+
+.home-brands-tout{
+	min-height: 250px;
+	text-align: center;
+	color: $white;
+	position: relative;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.home-brands-tout-content{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0);
+        .home-brands-tout-content-title{
+            font-size: 1.5em;
+            font-weight: bold;
+            display: block;
+			line-height: 1em;
+        }
+        .home-brands-tout-content-subtitle{
+            display: block;
+            font-size: 1.2em;
+			font-weight: 500;
+			margin: $gutter / 2 0;
+        }
+        .home-brands-tout-content-button{
+			font-size: 1.5em;
+			letter-spacing: .1em;
+			background: $ca-blue-light;
+			color: $white;
+			border-radius: 5px;
+			display: inline-block;
+			border-bottom: solid 2px $ca-blue;
+			margin-top: $gutter;
+			&:hover{
+				text-decoration: none;
+				background: $ca-blue;
+			}
+			span{
+				display: block;
+				padding: 0 25px;
+			}
+        }
+    }
+}

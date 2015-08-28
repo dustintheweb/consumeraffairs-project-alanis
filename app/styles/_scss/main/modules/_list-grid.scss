@@ -13,9 +13,10 @@
 			font-style: italic;
 			font-weight: normal;
 			line-height: 1.5em;
-			margin-top:10px;
+			margin-top: -10px;
+			padding-top: 20px;
 			&:first-child{
-				margin-top: 0;
+				padding-top: 0;
 			}
 		}
 		dd{
