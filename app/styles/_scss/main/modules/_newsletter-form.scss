@@ -1,0 +1,103 @@
+.newsletter{
+    position: relative;
+    .newsletter-handle{
+        color: $white;
+        cursor: pointer;
+        @include transition;
+        &:hover{ color: $grey; }
+    }
+    .newsletter-wrapper{
+        overflow-y: hidden;
+        @include transition;
+    }
+    &.closed{
+        .newsletter-handle{
+            span{ display: block;}
+        }
+        .newsletter-wrapper{
+            max-height: 0 !important;
+            &:before{
+                opacity: 0;
+            }
+        }
+    }
+}
+
+header .newsletter {
+    display: inline-block;
+    .newsletter-wrapper{
+        width: 320px;
+        z-index: 1000;
+        padding-top: 10px;
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        margin-left: -160px;
+        @include responsive-sm {
+            position: absolute;
+            top: 100%;
+            left: -120px;
+            margin-left: 0;
+        }
+        &:before{
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent fade-out($grey, .3);
+            position: absolute;
+            top: 0;
+            left: 45%;
+            content: '';
+            display: block;
+            opacity: 1;
+            @include transition;
+        }
+    }
+    .newsletter-header{
+        padding:2px $gutter;
+        color: $white;
+        text-align: center;
+        background: $ca-blue-variant;
+        border-radius: 5px 5px 0 0;
+    }
+    .newsletter-form{
+        padding: $gutter;
+        background: fade-out($grey, .3);
+        border-radius: 0 0 5px 5px;
+        &:after{
+            @extend .cf:after;
+        }
+        .newsletter-form-content{
+            width: 74%;
+            display: inline-block;
+            vertical-align: bottom;
+            .newsletter-form-item{
+                &:first-child{
+                    margin-bottom: $gutter / 2;
+                }
+                label{ display: none; }
+                input{
+                    padding: 5px $gutter;
+                    width: 100%;
+                }
+            }
+        }
+        .newsletter-form-button{
+            width: 26%;
+            margin-left: -5px;
+            display: inline-block;
+            vertical-align: bottom;
+            button{
+                color: $white;
+                font-size: .9em;
+                padding:3px 10px;
+                background: $ca-green;
+                @include transition;
+                &:hover{
+                    background: darken($ca-green, 25%);
+                }
+            }
+        }
+    }
+}

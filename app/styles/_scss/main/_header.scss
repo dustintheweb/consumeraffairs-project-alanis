@@ -2,16 +2,19 @@
 // endbower
 
 header {
-    overflow: hidden;
+    //overflow: hidden;
     position: fixed;
     z-index: 10;
     top: 0;
     height: 50px;
     width: 100%;
     background: $ca-blue;
-    transition: background 0.2s ease-in-out;
+
+    @include transition;
+
     @include responsive-sm {
         background: none;
+        top: 25px;
     };
 
     .bg-blue {
