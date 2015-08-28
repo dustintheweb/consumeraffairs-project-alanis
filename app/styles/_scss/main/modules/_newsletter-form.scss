@@ -17,13 +17,13 @@
         .newsletter-wrapper{
             max-height: 0 !important;
             &:before{
-                opacity: 0;
+                opacity: 0 !important;
             }
         }
     }
 }
 
-header .newsletter {
+header#home-header .newsletter {
     display: inline-block;
     .newsletter-wrapper{
         width: 320px;
