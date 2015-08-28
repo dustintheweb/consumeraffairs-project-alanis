@@ -116,13 +116,23 @@ var app = {
 			if(options.initopen >= 0 && options.initopen == i){
 				obj.addClass(options.closedstate);
 			}
+			if(options.closeclickoutside){
+				$(document).click(function(e){
+					if(!obj.hasClass(options.closedstate)){
+						if(!$.contains(obj.get(0), e.target)){
+							obj.addClass(options.closedstate);
+						}
+					}
+				});
+			}
 		});
 	};
 	$.fn.accordion.defaults = {
 		closedstate: 'closed',
 		handle: '> [class$="handle"]',
 		content: '> [class$="content"]',
-		initopen: -1
+		initopen: -1,
+		closeclickoutside: false
 	};
 })(jQuery);
 
@@ -204,7 +214,7 @@ var app = {
 // -- fastclick ---------------
 	//FastClick.attach(document.body);
 
-	$('.newsletter').accordion({content: '> [class$="wrapper"]'});
+	$('.newsletter').accordion({content: '> [class$="wrapper"]', closeclickoutside: true});
 	$('.list-grid > dl').showmore({items: 'dd', header: 'dt'});
 
 	// Waiting on images to load.
