@@ -2,7 +2,48 @@
 ============================================*/
 
 .list-grid {
-	// main module
+	@include max-content-width;
+	padding: $gutter;
+	dl{
+		padding: 0;
+		margin: 0;
+		dt{
+			font-size: 2em;
+			color: $blackLighter;
+			font-style: italic;
+			font-weight: normal;
+			line-height: 1.5em;
+			margin-top:10px;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+		dd{
+			margin: 0;
+			a{
+				padding: 3px 0;
+				display: block;
+				&:hover{
+					text-decoration: none;
+					color: $ca-blue-dark;
+				}
+			}
+		}
+		@include responsive-sm {
+			columns: 2;
+		}
+		@include responsive-md {
+			columns: 3;
+			dd{
+				a{
+					padding: 0;
+				}
+			}
+		}
+		@include responsive-lg {
+			columns: 4;
+		}
+	}
 }
 // variants
 .list-grid-home {

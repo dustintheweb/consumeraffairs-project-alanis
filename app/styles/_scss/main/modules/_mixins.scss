@@ -43,3 +43,10 @@ $screen-md-max:     ($screen-lg-min - 1);
 // 		}
 //     }
 // }
+
+@mixin transition($type:all, $speed:300ms, $ease:ease-out){
+    -moz-transition: $type $speed $ease;
+    -o-transition: $type $speed $ease;
+    -webkit-transition: $type $speed $ease;
+    transition: $type $speed $ease;
+}

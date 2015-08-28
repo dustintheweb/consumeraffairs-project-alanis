@@ -1,0 +1,23 @@
+.showmore_wrapper{
+    .showmore_handle{
+        color: $grey;
+        cursor: pointer;
+        @include transition;
+        &:hover{ color: $greyDarker; }
+        &:after{ content: "Less"; }
+        span{ display: none;}
+    }
+    .showmore_content{
+        overflow-y: hidden;
+        @include transition;
+    }
+    &.closed{
+        .showmore_handle{
+            &:after{ display: none;}
+            span{ display: block;}
+        }
+        .showmore_content{
+            max-height: 0 !important;
+        }
+    }
+}

@@ -2,6 +2,12 @@
 ============================================*/
 
 // >> General Variables & Helper Classes >>>>>>>>>>>> */
+$gutter: 15px;
+$max-width: 1200px;
+@mixin max-content-width {
+    margin: 0 auto;
+    max-width: $max-width;
+}
 
 // Typography helpers
 .lowercase {
@@ -30,6 +36,9 @@
 // Remove
 .hide {
     display:none;
+}
+.show {
+    display: block;
 }
 
 // Visibility
