@@ -9,8 +9,10 @@ header {
     height: 3em;
     width: 100%;
     background: $ca-blue;
+    @include transition;
     @include responsive-sm {
         background: none;
+        top: 25px;
     };
 
     .bg-blue {
