@@ -2,10 +2,79 @@
 // endbower
 
 header {
-    height: 60px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    height: 3em;
+    width: 100%;
     background: $ca-blue;
+    @include responsive-sm {
+        background: none;
+    };
 
-    * {
-        display: none;
+    .bg-blue {
+        background: $ca-blue;
+    }
+
+    &.logo-active {
+        background: $ca-blue;
+        > .inner {
+            > .primary {
+                top: -33px;
+            }
+        }
+    }
+
+    a, a:hover {
+        color: $white;
+    }
+
+    > .inner {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 0.5em;
+        margin: 0 auto;
+
+        > .primary {
+            position: relative;
+            display: table-cell;
+            top: 10px;
+
+            .subscribe {
+                padding-bottom: 1em;
+            }
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                li {
+                    display: inline-block;
+                }
+            }
+            > nav {
+                display: none;
+            }
+        }
+        > .secondary {
+            display: table-cell;
+            width:100px;
+            * {
+                display: none;
+            }
+        }
+
+        .logo-ca {
+            height: 0.75em;
+            vertical-align: middle;
+            fill: $white;
+            @include responsive-sm {
+                height: 1.4em;
+
+            }
+        }
     }
 }

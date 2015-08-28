@@ -23,7 +23,8 @@
 				width: 100%;
 			}
 		}
-		a{
+		a {
+			transform: translate3d();
 			color: $white;
 			display: block;
 			position: relative;

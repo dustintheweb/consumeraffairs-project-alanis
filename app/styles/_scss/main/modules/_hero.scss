@@ -2,64 +2,152 @@
 ============================================*/
 
 .hero {
-	background: #ccc;
+	position: relative;
+	background-color: #3c91c8;
+	figure {
+		overflow: hidden;
+		position: relative;
+		z-index: 4;
+		height: 455px;
+		margin: 0;
+		@include responsive-sm {
+			height: 550px;
+		}
+		//
+		> .bg {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	figcaption {
+		position: relative;
+		z-index: 5;
+		top: 50%;
+		transform: translate3d(0,-50%,0);
+		margin: 0 auto;
+		text-align: center;
+		color: #fff;
+	}
+	h1 {
+		padding: 0;
+		margin: 0 0 0.15em 0;
+		line-height: 0;
+		@include responsive-sm {
+			margin-bottom: 0.2em;
+		}
+		svg {
+			height: 0.75em;
+			vertical-align: middle;
+			fill: $white;
+			@include responsive-sm {
+				height: 1.4em;
 
-	iframe {
-		width: 100%;
-		height: 27px;
-		font-size:0.938em !important;
-		border: none;
+			}
+		}
+	}
+	h2 {
+		padding: 0;
+    	margin: 0 0 0.3em 0;
+		font-size: 1.15em;
+		@include responsive-sm {
+			font-size: 2em;
+		};
 	}
 }
 // variants
 .home-hero {
-
-}
-
-.home-brands-tout{
-	min-height: 250px;
-	text-align: center;
-	color: $white;
-	position: relative;
-	background-position: center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	.home-brands-tout-content{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate3d(-50%,-50%,0);
-        .home-brands-tout-content-title{
-            font-size: 1.5em;
-            font-weight: bold;
-            display: block;
-			line-height: 1em;
-        }
-        .home-brands-tout-content-subtitle{
-            display: block;
-            font-size: 1.2em;
-			font-weight: 500;
-			margin: $gutter / 2 0;
-        }
-        .home-brands-tout-content-button{
-			font-size: 1.5em;
-			letter-spacing: .1em;
-			background: $ca-blue-light;
-			color: $white;
-			border-radius: 5px;
-			display: inline-block;
-			border-bottom: solid 2px $ca-blue;
-			margin-top: $gutter;
-			&:hover{
-				text-decoration: none;
-				background: $ca-blue;
+	iframe {
+		display:none;
+	}
+	// iframe {
+	// 	width: 100%;
+	// 	height: 27px;
+	// 	font-size:0.938em !important;
+	// 	border: none;
+	// }
+	figure {
+		> .bg {
+			transform: translate3d();
+		    background: url(https://s3-us-west-2.amazonaws.com/ca-hackathon/home-hero-bg.jpg) no-repeat center center;
+			background-size:cover;
+			@include responsive-lg {
+				background-position: 50% 50%;
 			}
-			span{
-				display: block;
-				padding: 0 25px;
+		}
+		> .gradient {
+		    content: '';
+		    position: absolute;
+		    z-index: 2;
+		    top: 0;
+		    left: 0;
+		    height: 100%;
+		    width: 100%;
+		    background: linear-gradient(to bottom, rgba(20,35,40,.90) -10%,rgba(20,35,40,0) 15%,rgba(20,35,40,0) 85%,rgba(20,35,40,.90) 110%);
+		}
+	}
+	.search form {
+		display:table;
+		table-layout: fixed;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 0.5em;
+		@include responsive-sm {
+			width: 600px;
+		}
+
+		> .primary {
+			transform: translate3d();
+			display: table-cell;
+			input {
+				width: 100%;
+				padding: 0.5em 0.75em;
+				font-size: 1em;
+				color: $pitch;
+				@include responsive-sm {
+					padding: 0.75em 1em;
+					font-size: 1.3em;
+				}
 			}
-        }
-    }
+			input::-webkit-input-placeholder {
+				color: $grey;
+			}
+			input::-moz-placeholder {
+				color: $grey;
+			}
+			input:-moz-placeholder {
+				color: $grey;
+			}
+			input:-ms-input-placeholder {
+				color: $grey;
+			}
+		}
+		> .secondary {
+			display: table-cell;
+			width: 78px;
+			@include responsive-sm {
+				width: 120px;
+			};
+			button {
+				padding: 0.25em 0.75em 0.3em;
+				margin-top: 0.25em;
+				font-size: 1em;
+				font-weight: bold;
+				background: $orange;
+				transition: background 0.2s ease-in-out;
+				@include responsive-sm {
+					padding: 0.375em 1em 0.5em;
+					margin-top: 0;
+					font-size: 1.4em;
+				}
+				&:hover {
+					background: darken($orange, 5%);
+				}
+			}
+		}
+	}
 }

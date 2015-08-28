@@ -1,5 +1,5 @@
-/*global $, jQuery, app:true, Modernizr, FastClick */
-/*some_used_var:false*/
+/*global $, jQuery, app:true, Modernizr, History, FastClick, window*/
+/*jshint unused:false*/
 /*jshint multistr:true*/
 'use strict';
 
@@ -10,15 +10,15 @@ var app = {
 		url: window.location.protocol+'//'+window.location.host,
 		currentUrl: window.location.href,
 		img: '/media/images',
+		cdn: '//dustintheweb-cdn.appspot.com/dustintheweb-2014',
 		cdnjs: '//cdnjs.cloudflare.com'
 	},
 	obj: {
-		$window: $('window'),
+		$window: $(window),
 		$html: $('html'),
 		$body: $('body'),
 		$header: $('body > .base > header'),
 		$core: $('body > .base > .core'),
-		$page: $('body > .base > .core > #page'),
 		$layout: $('body > .base > .core > #page > .layout'),
 		$main: $('body > .base > .core > #page > .layout > .main'),
 		$section: $('section'),
@@ -32,23 +32,65 @@ var app = {
 	}
 };
 
+// Parallax
 (function ($) {
-	// -- trigger action on resize once ----------
-	$(window).resize($.debounce(250, true,
+	var $hero = $('.hero'),
+		$figure = $hero.find('figure'),
+		$figcaption = $figure.find('figcaption'),
+		$figcaptionPrimary = $figcaption.find('> .primary'),
+		$figureBG = $figure.find('> .bg');
+
+	app.obj.$window.scroll($.throttle(0, true,
 	    function() {
-	        $(window).trigger('onResizeBegin');
-	    }
-	));
-	$(window).resize($.debounce(250,
-	    function() {
-	        app.width = $(window).width();
-	        app.height = $(window).height();
-	        $(window).trigger('onResizeEnd');
+			$figcaptionPrimary.css({
+				'opacity':(400-app.obj.$window.scrollTop())/400,
+				'transform':'translate3d(0,'+(app.obj.$window.scrollTop()/5)+'px,0)'
+			});
+			$figureBG.css({
+				'transform':'translate3d(0,'+(app.obj.$window.scrollTop()/5)+'px,0)'
+			});
 	    }
 	));
 })(jQuery);
 
+// resize thing
+(function ($) {
+	// -- trigger action on resize once ----------
+	app.obj.$window.resize($.debounce(250, true,
+	    function() {
+	        app.obj.$window.trigger('onResizeBegin');
+	    }
+	));
+	app.obj.$window.resize($.debounce(250,
+	    function() {
+	        app.width = app.obj.$window.width();
+	        app.height = app.obj.$window.height();
+	        app.obj.$window.trigger('onResizeEnd');
+	    }
+	));
+})(jQuery);
 
+(function ($) {
+	var $metroGrid = $('.metro-grid'),
+		$headerPrimary = app.obj.$header.find('> .inner > .primary');
+
+	app.obj.$window.scroll($.throttle(250, true,
+	    function() {
+
+			if ((app.obj.$window.scrollTop() + (app.obj.$header.height()*4)) >= $metroGrid.offset().top) {
+				app.obj.$header.addClass('logo-active')
+			} else {
+				app.obj.$header.removeClass('logo-active')
+			}
+
+			if (app.obj.$body.is('.vmin600')) {
+
+			}
+	    }
+	));
+})(jQuery);
+
+// some iframe crap
 (function ($) {
 	var iframe = $('iframe'),
 		iScrollHeight = iframe.prop('scrollHeight');
@@ -70,7 +112,7 @@ var app = {
 				obj.toggleClass(options.closedstate);
 			});
 			content.css('max-height', content.outerHeight());
-			obj.addClass(options.closedstate)
+			obj.addClass(options.closedstate);
 			if(options.initopen >= 0 && options.initopen == i){
 				obj.addClass(options.closedstate);
 			}
@@ -92,7 +134,7 @@ var app = {
 			$.fn.showmore.init(objs, options);
 		}
 		$( window ).resize(function() {
-			var windowWidth = $(window).width();
+			var windowWidth = app.obj.$window.width();
 			if(windowWidth > options.maxWidth){
 				$.fn.showmore.destroy(objs, options);
 			}else{
@@ -166,7 +208,7 @@ var app = {
 	$('.list-grid > dl').showmore({items: 'dd', header: 'dt'});
 
 	// Waiting on images to load.
-	$(window).load(function() {
+	app.obj.$window.load(function() {
 	    $('.home-metro-grid .inner').showmore({handleText: 'More categories'});
 	});
 })(jQuery);
