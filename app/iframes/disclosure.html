@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <meta name="robots" content="noindex">
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.5em;
+      color: rgb(22, 107, 161);
+      background-color: #FFF;
+      font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+    }
+
+    span {
+      text-decoration: underline;
+      color: rgb(22, 107, 161);
+      cursor: pointer;
+    }
+
+    #disclosure {
+      padding: 5px 10px 10px 10px;
+    }
+
+    @media (min-width: 992px) {
+      body {
+        font-size: 0.9em;
+        margin: 0;
+        line-height: 1.25em;
+        color: rgb(22, 107, 161);
+      }
+      span {
+        color: rgb(22, 107, 161);
+      }
+      #disclosure {
+        padding: 5px 15px;
+      }
+    }
+  </style>
+
+  <script>
+    windowHeight = 0;
+
+    function onResizeHandler(event) {
+      if (windowHeight == document.getElementById('disclosure').offsetHeight) return;
+      windowHeight = document.getElementById('disclosure').offsetHeight;
+      window.parent.postMessage(["updateDisclosureHeaderHeight", windowHeight], "*");
+    }
+    window.onload = window.onresize = onResizeHandler;
+
+    function findOutMore(campaignID) {
+      window.parent.postMessage(["openMarketoForm", campaignID], "*");
+    }
+  </script>
+</head>
+
+<body>
+  <div id="disclosure">
+    ConsumerAffairs is not a government agency and charges a fee to companies to become accredited. <a href="http://www.consumeraffairs.com/about/faq/#what-is-consumeraffairs-for-brands" target="_top" style="color:#166BA1">Learn More</a>
+    <div>
+    </div>
+  </div>
+</body>
+
+</html>

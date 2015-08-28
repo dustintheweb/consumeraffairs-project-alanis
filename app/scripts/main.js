@@ -32,6 +32,30 @@ var app = {
 	}
 };
 
+(function ($) {
+	// -- trigger action on resize once ----------
+	$(window).resize($.debounce(250, true,
+	    function() {
+	        $(window).trigger('onResizeBegin');
+	    }
+	));
+	$(window).resize($.debounce(250,
+	    function() {
+	        app.width = $(window).width();
+	        app.height = $(window).height();
+	        $(window).trigger('onResizeEnd');
+	    }
+	));
+})(jQuery);
+
+
+(function ($) {
+	var iframe = $('iframe'),
+		iScrollHeight = iframe.prop('scrollHeight');
+
+})(jQuery);
+
+
 // ACCORDION
 (function ($) {
 	$.fn.accordion = function (options) {
