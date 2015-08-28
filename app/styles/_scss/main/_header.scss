@@ -2,16 +2,13 @@
 // endbower
 
 header {
-    //overflow: hidden;
     position: fixed;
     z-index: 10;
     top: 0;
     height: 50px;
     width: 100%;
     background: $ca-blue;
-
     @include transition;
-
     @include responsive-sm {
         background: none;
         top: 25px;
@@ -26,6 +23,12 @@ header {
         > .inner {
             > .primary {
                 transform: translate3d(0,-50px,0);
+                .newsletter-wrapper {
+                    transform: translate3d(0,0,0);
+                }
+                .logo {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -55,29 +58,12 @@ header {
         > .primary {
             position: relative;
             display: table-cell;
+            vertical-align: top;
             transition: transform 0.2s ease-in-out;
 
-            .subscribe {
-                a {
-                    display: inline-block;
-                    padding: 11px 20px 11px 10px;
-                    height: 50px;
-                }
-                span {
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-                svg.icon-mail {
-                    display: inline-block;
-                    vertical-align: middle;
-                    height:25px;
-                    width:35px;
-                    margin-bottom: 4px;
-                    fill: $white;
-                }
-            }
-
             .logo {
+                opacity: 0;
+                transition: opacity 0.2s ease-in-out;
                 a {
                     display: inline-block;
                     padding: 11px 10px;
@@ -100,7 +86,9 @@ header {
         }
         > .secondary {
             display: table-cell;
+            vertical-align: top;
             width:50px;
+            padding-top: 4px;
             //
 
             .search {

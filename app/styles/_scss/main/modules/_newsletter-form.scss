@@ -1,19 +1,40 @@
 .newsletter{
     position: relative;
-    .newsletter-handle{
+    .newsletter-handle {
         color: $white;
         cursor: pointer;
+        padding: 11px 20px 11px 10px;
+        height: 50px;
+        display: inline-block;
         @include transition;
-        &:hover{ color: $grey; }
+        &:hover{
+            color: $white;
+            text-decoration: none;
+            background: rgba(0,0,0,0.2);
+            @include responsive-sm {
+                background: none;
+                text-decoration: underline;
+            };
+        }
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        svg.icon-mail {
+            display: inline-block;
+            vertical-align: middle;
+            height:25px;
+            width:35px;
+            margin-bottom: 4px;
+            fill: $white;
+        }
+
     }
     .newsletter-wrapper{
         overflow-y: hidden;
         @include transition;
     }
     &.closed{
-        .newsletter-handle{
-            span{ display: block;}
-        }
         .newsletter-wrapper{
             max-height: 0 !important;
             &:before{
@@ -26,6 +47,7 @@
 header .newsletter {
     display: inline-block;
     .newsletter-wrapper{
+        transform: translate3d(0,-50px,0);
         width: 320px;
         z-index: 1000;
         padding-top: 10px;
@@ -35,8 +57,9 @@ header .newsletter {
         margin-left: -160px;
         @include responsive-sm {
             position: absolute;
-            top: 100%;
-            left: -120px;
+            top: 90px;
+            right: -195px;
+            left: auto;
             margin-left: 0;
         }
         &:before{
@@ -52,6 +75,7 @@ header .newsletter {
             display: block;
             opacity: 1;
             @include transition;
+            display: none;
         }
     }
     .newsletter-header{
