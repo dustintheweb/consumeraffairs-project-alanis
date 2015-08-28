@@ -77,7 +77,7 @@ var app = {
 	app.obj.$window.scroll($.throttle(250, true,
 	    function() {
 
-			if ((app.obj.$window.scrollTop() + (app.obj.$header.height()*4)) >= $metroGrid.offset().top) {
+			if ((app.obj.$window.scrollTop() + (app.obj.$header.height()*5)) >= $metroGrid.offset().top) {
 				app.obj.$header.addClass('logo-active')
 			} else {
 				app.obj.$header.removeClass('logo-active')
